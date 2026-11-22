@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebKit Studio – Nowoczesne strony WWW | Płatność BLIK po podglądzie</title>
+    <meta name="description" content="Tworzymy szybkie strony HTML, CSS i JS od 50 zł (Basic, Standard, Pro). Zero zaliczki – najpierw testujesz link podglądowy, a płacisz BLIK-iem po akceptacji.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Pasek postępu przewijania na samej górze -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Tło: subtelna siatka + animowane światła -->
+    <div class="bg-ambient" aria-hidden="true">
+        <div class="cyber-grid"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Nawigacja / Menu -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#start" class="logo-link">
+                <img src="logo.png" alt="WebKit Studio Logo" class="nav-logo">
+            </a>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#start" class="nav-link">Start</a>
+                <a href="#jak-to-dziala" class="nav-link">Jak to działa?</a>
+                <a href="#oferta" class="nav-link">Oferta</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#" class="nav-link soon-link" id="examplesLink">
+                    Przykłady <span class="tag-soon">Wkrótce</span>
+                </a>
+                <a href="#wycena" class="btn-nav">Skonfiguruj stronę</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Otwórz menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sekcja Hero (Start) -->
+    <section id="start" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text reveal">
+                <div class="badges-row">
+                    <span class="badge">⚡ CZYSTY KOD HTML • CSS • JS</span>
+                    <span class="badge badge-blik">📱 PŁATNOŚĆ BLIK PO PODGLĄDZIE</span>
+                    <span class="badge badge-tier">👑 BASIC • STANDARD • PRO</span>
+                </div>
+                <h1>Tworzymy strony, które <br><span class="gradient-text" id="typewriter">przyciągają klientów</span><span class="cursor-blink">|</span></h1>
+                <p>Dostarczamy gotowy, w pełni działający kod dopasowany pod Twój pomysł. <strong>Zero ryzyka:</strong> najpierw dostajesz od nas link testowy, klikasz i sprawdzasz gotową stronę na żywo, a płacisz <strong>BLIK-iem</strong> dopiero wtedy, gdy efekt w pełni Ci odpowiada.</p>
+                <div class="hero-buttons">
+                    <a href="#wycena" class="btn-primary btn-shimmer">
+                        <span>Wybierz wersję i wyceń (od 50 zł)</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#jak-to-dziala" class="btn-secondary">Zobacz jak to działa</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <strong>Od 50 zł</strong>
+                        <span>pakiet Basic</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong>0 zł zaliczki</strong>
+                        <span>płatność po teście</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong>100% kodu</strong>
+                        <span>pliki na własność</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal">
+                <div class="logo-card">
+                    <div class="logo-ring"></div>
+                    <div class="logo-ring logo-ring-inner"></div>
+                    <img src="logo.png" alt="WebKit Studio" class="floating-logo">
+                    <div class="floating-pill pill-top">✨ Podgląd przed płatnością</div>
+                    <div class="floating-pill pill-bottom">⚡ Szybki start od 50 zł</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja: Bezpieczny proces -->
+    <section id="jak-to-dziala" class="process-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-kicker">PROCES WSPÓŁPRACY</span>
+                <h2 class="section-title">Zero ryzyka. <span class="gradient-text">Najpierw widzisz, potem płacisz</span></h2>
+                <p class="section-subtitle">Nie kupujesz kota w worku – zobacz, jak wygląda zamówienie krok po kroku.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card glow-card reveal">
+                    <div class="step-top">
+                        <span class="step-number">01</span>
+                        <span class="step-icon">🎛️</span>
+                    </div>
+                    <h3>Wybierasz wersję i dodatki</h3>
+                    <p>Decydujesz między wersją <strong>Basic</strong>, <strong>Standard</strong> lub <strong>Pro</strong> oraz dobierasz funkcje. Cena liczy się na żywo.</p>
+                </div>
+                <div class="step-card glow-card reveal">
+                    <div class="step-top">
+                        <span class="step-number">02</span>
+                        <span class="step-icon">🔗</span>
+                    </div>
+                    <h3>Testujesz link podglądowy</h3>
+                    <p>Kodujemy stronę i wysyłamy Ci link do testów. Sprawdzasz wygląd i animacje na telefonie oraz komputerze przed zapłatą.</p>
+                </div>
+                <div class="step-card glow-card reveal">
+                    <div class="step-top">
+                        <span class="step-number">03</span>
+                        <span class="step-icon">📲</span>
+                    </div>
+                    <h3>BLIK i paczka plików od 0</h3>
+                    <p>Po akceptacji rozliczamy się szybko <strong>BLIK-iem</strong>, a Ty dostajesz komplet plików i prosty poradnik jak z nimi ruszyć.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja Oferta -->
+    <section id="oferta" class="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-kicker">CO ZYSKUJESZ</span>
+                <h2 class="section-title">Co dokładnie <span class="gradient-text">dla Ciebie zrobimy?</span></h2>
+                <p class="section-subtitle">Lekki, czysty kod bez abonamentów, zbędnych wtyczek i ukrytych kosztów.</p>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card glow-card reveal">
+                    <div class="card-icon-wrap">💻</div>
+                    <h3>Czysty i szybki kod</h3>
+                    <p>Otrzymujesz gotowe pliki źródłowe (HTML, CSS, JS), które ładują się błyskawicznie na ekranach mobilnych i desktopowych.</p>
+                </div>
+                <div class="card glow-card reveal">
+                    <div class="card-icon-wrap">✨</div>
+                    <h3>Przyciągający wygląd i ruch</h3>
+                    <p>Dopasowana kolorystyka, nowoczesne karty, płynne przejścia i mikro-animacje, które zatrzymują uwagę odwiedzających.</p>
+                </div>
+                <div class="card glow-card reveal">
+                    <div class="card-icon-wrap">📓</div>
+                    <h3>Poradnik obsługi od 0</h3>
+                    <p>Dostajesz jasną instrukcję krok po kroku: jak otworzyć projekt, podmienić tekst czy zdjęcie oraz uruchomić stronę.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja Dlaczego my -->
+    <section id="realizacje" class="showcase-section">
+        <div class="container showcase-grid">
+            <div class="code-window reveal">
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="window-title">webkit-studio — config.js</span>
+                </div>
+                <pre class="window-body"><code><span class="c-attr">const</span> <span class="c-tag">webkitOrder</span> = {
+  <span class="c-attr">versions</span>: [<span class="c-str">"Basic"</span>, <span class="c-str">"Standard"</span>, <span class="c-str">"Pro"</span>],
+  <span class="c-attr">startFrom</span>: <span class="c-num">"50 PLN"</span>,
+  <span class="c-attr">livePreviewBeforePayment</span>: <span class="c-num">true</span>,
+  <span class="c-attr">payment</span>: <span class="c-str">"BLIK po akceptacji"</span>,
+  <span class="c-attr">codeOwnership</span>: <span class="c-str">"100% Twoja paczka"</span>
+};</code></pre>
+            </div>
+
+            <div class="showcase-text reveal">
+                <span class="section-kicker">UCZCIWE ZASADY</span>
+                <h2>Gotowa strona <span class="gradient-text">bez przepłacania</span></h2>
+                <p>Wybierasz dokładnie ten poziom, którego potrzebujesz – od lekkiej wizytówki <strong>Basic</strong>, przez bardziej angażujący <strong>Standard</strong>, aż po rozbudowaną wersję <strong>Pro</strong> z efektami i dodatkami.</p>
+                <ul class="check-list">
+                    <li><span class="check-badge">✓</span> <span><strong>Płatność BLIK</strong> dopiero po obejrzeniu działającego linku testowego</span></li>
+                    <li><span class="check-badge">✓</span> <span><strong>Brak miesięcznych abonamentów</strong> za sam kod strony</span></li>
+                    <li><span class="check-badge">✓</span> <span><strong>Wsparcie i instrukcja od zera</strong> przy uruchomieniu plików</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-kicker">PYTANIA I ODPOWIEDZI</span>
+                <h2 class="section-title">Często zadawane <span class="gradient-text">pytania</span></h2>
+                <p class="section-subtitle">Szybkie odpowiedzi przed wysłaniem konfiguracji.</p>
+            </div>
+
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Czym różnią się wersje Basic, Standard i Pro?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Basic</strong> to przejrzysta strona startowa (idealna na wizytówkę lub prosty landing). <strong>Standard</strong> dodaje więcej sekcji, dopracowane animacje i lepszą strukturę sprzedażową. <strong>Pro</strong> to najbardziej rozbudowana wersja z bogatymi animacjami, dodatkowymi podstronami/sekcjami i mocniejszym efektem wizualnym.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Kiedy płacę BLIK-iem i jak wygląda podgląd?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Najpierw tworzymy stronę i wysyłamy Ci link do testów. Oglądasz wszystko na spokojnie, zgłaszasz ewentualne poprawki w ramach pakietu, a BLIK-iem płacisz dopiero po akceptacji gotowego efektu.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Czy muszę płacić co miesiąc za utrzymanie strony?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Nie pobieramy żadnych abonamentów.</strong> Otrzymujesz gotową paczkę plików HTML, CSS i JS na własność, którą możesz uruchomić u siebie lub na wybranym hostingu.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Jak szybko dostanę link do testów?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Zazwyczaj w ciągu <strong>1–4 dni</strong> (w zależności od wybranej wersji i dodatków). Jeśli zależy Ci na czasie, możesz zaznaczyć w konfiguratorze opcję <strong>Priorytet / Szybka realizacja</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sekcja Formularz + Kalkulator -->
+    <section id="wycena" class="pricing-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-kicker">KONFIGURATOR ONLINE</span>
+                <h2 class="section-title">Wybierz wersję i <span class="gradient-text">zamów swoją stronę</span></h2>
+                <p class="section-subtitle">Przełącz wersję strony (Basic / Standard / Pro) i dobierz dodatki – podsumowanie liczy się na żywo.</p>
+            </div>
+
+            <div class="order-wrapper reveal">
+                <div class="trust-banner">
+                    <span class="trust-icon">🛡️</span>
+                    <div>
+                        <strong>Bezpieczne zamówienie bez zaliczki:</strong> Najpierw wysyłamy Ci link do podglądu gotowej strony. Płacisz <strong>BLIK-iem</strong> dopiero po akceptacji!
+                    </div>
+                </div>
+
+                <!-- Formularz skonfigurowany pod formsubmit.cloud -->
+                <form id="orderForm" action="https://formsubmit.cloud/f/5e2f6f11-5b4c-4c7c-923e-2127d5a97b85/" method="POST" class="order-form">
+
+                    <!-- Pole antyspamowe Honeypot dla formsubmit.cloud -->
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+                    <!-- Ukryte dane podsumowania zamówienia -->
+                    <input type="hidden" name="Temat_Zgloszenia" value="Nowe zamówienie strony - WebKit Studio">
+                    <input type="hidden" name="Wybrana_Wersja_Strony" id="hiddenTierName" value="BASIC (50 zł)">
+                    <input type="hidden" name="Wyliczony_Koszt_Calkowity" id="hiddenTotalPrice" value="50 zł">
+                    <input type="hidden" name="Szczegoly_Zamowienia" id="hiddenSelectedOptions" value="Wersja: BASIC (50 zł)">
+                    <input type="hidden" name="Metoda_Platnosci" value="BLIK po otrzymaniu linku podglądowego">
+
+                    <div class="form-group-row">
+                        <div class="input-box">
+                            <label for="fullname">Imię i nazwisko / Nick *</label>
+                            <input type="text" id="fullname" name="name" placeholder="np. Jan Kowalski" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="email">Twój adres E-mail *</label>
+                            <input type="email" id="email" name="email" placeholder="np. jan.kowalski@gmail.com" required>
+                        </div>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="phone">Numer telefonu (opcjonalnie – np. do szybkiego kontaktu lub BLIK)</label>
+                        <input type="tel" id="phone" name="Telefon" placeholder="np. +48 123 456 789">
+                    </div>
+
+                    <!-- Wybór wersji strony: BASIC / STANDARD / PRO -->
+                    <div class="tier-selector-block">
+                        <div class="options-header">
+                            <h3>1. Wybierz bazową wersję strony:</h3>
+                            <span class="range-info">3 poziomy do wyboru</span>
+                        </div>
+
+                        <div class="tier-grid" role="radiogroup" aria-label="Wybierz wersję strony">
+                            <button type="button" class="tier-card is-selected" data-tier="BASIC" data-tier-price="50" data-tier-desc="Strona startowa / wizytówka + podgląd przed BLIK">
+                                <div class="tier-badge">START</div>
+                                <div class="tier-name">BASIC</div>
+                                <div class="tier-price">50 zł</div>
+                                <p class="tier-desc">Przejrzysta strona główna, responsywny układ i link testowy przed płatnością BLIK.</p>
+                                <ul class="tier-features">
+                                    <li>✓ Układ One-Page / wizytówka</li>
+                                    <li>✓ RWD (telefon i komputer)</li>
+                                    <li>✓ Podgląd przed zapłatą</li>
+                                </ul>
+                            </button>
+
+                            <button type="button" class="tier-card" data-tier="STANDARD" data-tier-price="130" data-tier-desc="Rozbudowana strona z płynnymi animacjami i sekcją FAQ/cennika">
+                                <div class="tier-badge tier-badge-popular">NAJCZĘSTSZY</div>
+                                <div class="tier-name">STANDARD</div>
+                                <div class="tier-price">130 zł</div>
+                                <p class="tier-desc">Więcej sekcji, dopracowane animacje wejścia, interaktywne elementy i lepsza sprzedaż.</p>
+                                <ul class="tier-features">
+                                    <li>✓ Wszystko z wersji Basic</li>
+                                    <li>✓ Rozbudowane sekcje i animacje</li>
+                                    <li>✓ Akordeon FAQ / sekcja korzyści</li>
+                                </ul>
+                            </button>
+
+                            <button type="button" class="tier-card" data-tier="PRO" data-tier-price="230" data-tier-desc="Pełny pakiet PRO z efektami interaktywnymi, podstronami i dopieszczeniem detali">
+                                <div class="tier-badge tier-badge-pro">MAX EFEKT</div>
+                                <div class="tier-name">PRO</div>
+                                <div class="tier-price">230 zł</div>
+                                <p class="tier-desc">Dla osób, które chcą wyróżniającej się strony z bogatym ruchem, dodatkowymi widokami i dopracowaniem detali.</p>
+                                <ul class="tier-features">
+                                    <li>✓ Wszystko ze Standard</li>
+                                    <li>✓ Zaawansowane animacje & efekty</li>
+                                    <li>✓ Dodatkowe podstrony / moduły</li>
+                                </ul>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dodatki i opcje zakupowe -->
+                    <div class="options-container">
+                        <div class="options-header">
+                            <h3>2. Dobierz dodatkowe opcje do zamówienia:</h3>
+                            <div class="options-actions">
+                                <button type="button" class="btn-reset-options" id="resetOptionsBtn" hidden>Wyczyść dodatki</button>
+                                <span class="range-info">Elastyczne dodatki</span>
+                            </div>
+                        </div>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" class="calc-option" name="Opcja_Instrukcja_Od_Zera" value="Tak (+35 zł)" data-label="Instrukcja obsługi od 0 (+35 zł)" data-price="35">
+                            <span class="custom-check"></span>
+                            <div class="option-info">
+                                <strong>Poradnik obsługi od 0 („Krok po kroku”)</strong>
+                                <span>Prosta instrukcja jak uruchomić stronę, edytować teksty i zdjęcia bez zbędnego żargonu</span>
+                            </div>
+                            <span class="option-price">+35 zł</span>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" class="calc-option" name="Opcja_Dodatkowe_Podstrony" value="Tak (+65 zł)" data-label="Dodatkowe podstrony / sekcje (+65 zł)" data-price="65">
+                            <span class="custom-check"></span>
+                            <div class="option-info">
+                                <strong>Dodatkowe podstrony lub rozbudowane sekcje</strong>
+                                <span>Osobne widoki np. Oferta, O nas, Realizacje, Kontakt połączone w menu</span>
+                            </div>
+                            <span class="option-price">+65 zł</span>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" class="calc-option" name="Opcja_Animacje_Efekty_JS" value="Tak (+55 zł)" data-label="Dynamiczne animacje i efekty JS (+55 zł)" data-price="55">
+                            <span class="custom-check"></span>
+                            <div class="option-info">
+                                <strong>Dynamiczne animacje CSS i interaktywne efekty JS</strong>
+                                <span>Płynne przejścia, liczniki, efekty pod kursorem, suwaki i interaktywne przyciski</span>
+                            </div>
+                            <span class="option-price">+55 zł</span>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" class="calc-option" name="Opcja_Teksty_i_Zdjecia" value="Tak (+45 zł)" data-label="Copywriting i dobór grafik (+45 zł)" data-price="45">
+                            <span class="custom-check"></span>
+                            <div class="option-info">
+                                <strong>Przygotowanie tekstów i dobór pasujących grafik</strong>
+                                <span>Napiszemy czytelne nagłówki i opisy pod Twój projekt oraz dobierzemy spójne wizualia</span>
+                            </div>
+                            <span class="option-price">+45 zł</span>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" class="calc-option" name="Opcja_Galeria_Lightbox" value="Tak (+40 zł)" data-label="Galeria z podglądem pełnoekranowym (+40 zł)" data-price="40">
+                            <span class="custom-check"></span>
+                            <div class="option-info">
+                                <strong>Galeria / portfolio z powiększaniem zdjęć (Lightbox)</strong>
+                                <span>Siatka zdjęć lub projektów z wygodnym powiększeniem i nawigacją</span>
+                            </div>
+                            <span class="option-price">+40 zł</span>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" class="calc-option" name="Opcja_Kalkulator_Lub_Cennik" value="Tak (+50 zł)" data-label="Interaktywny kalkulator / cennik JS (+50 zł)" data-price="50">
+                            <span class="custom-check"></span>
+                            <div class="option-info">
+                                <strong>Własny kalkulator wyceny lub interaktywny cennik</strong>
+                                <span>Skrypt w JS liczący cenę dla Twoich klientów na podstawie zaznaczonych opcji</span>
+                            </div>
+                            <span class="option-price">+50 zł</span>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" class="calc-option" name="Opcja_Formularz_Kontaktowy" value="Tak (+35 zł)" data-label="Formularz kontaktowy na e-mail (+35 zł)" data-price="35">
+                            <span class="custom-check"></span>
+                            <div class="option-info">
+                                <strong>Działający formularz kontaktowy na Twoją skrzynkę</strong>
+                                <span>Wiadomości od odwiedzających trafiają bezpośrednio na wskazany adres e-mail</span>
+                            </div>
+                            <span class="option-price">+35 zł</span>
+                        </label>
+
+                        <label class="checkbox-card">
+                            <input type="checkbox" class="calc-option" name="Opcja_Priorytet_Szybka_Realizacja" value="Tak (+40 zł)" data-label="Priorytetowa realizacja (+40 zł)" data-price="40">
+                            <span class="custom-check"></span>
+                            <div class="option-info">
+                                <strong>Priorytetowa kolejka (szybszy podgląd)</strong>
+                                <span>Twój projekt trafia na górę kolejki, abyś szybciej dostał link do testów</span>
+                            </div>
+                            <span class="option-price">+40 zł</span>
+                        </label>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="details">Dodatkowe uwagi / opis Twojego pomysłu</label>
+                        <textarea id="details" name="message" rows="4" placeholder="Opisz krótko co ma znaleźć się na stronie, jakie kolory lubisz i jaki efekt chcesz osiągnąć..."></textarea>
+                    </div>
+
+                    <!-- Podsumowanie wybranej wersji i ceny na żywo -->
+                    <div class="summary-pill-bar" id="summaryPillBar">
+                        <span>Wybrany pakiet: <strong id="activeTierLabel">BASIC (50 zł)</strong></span>
+                        <span id="activeAddonsCount">Dodatki: brak</span>
+                    </div>
+
+                    <div class="total-bar">
+                        <div class="total-left">
+                            <div class="total-label">
+                                <span>Szacowany koszt Twojej strony:</span>
+                                <small>Płatność BLIK dopiero po obejrzeniu linku z gotową stroną</small>
+                            </div>
+                            <div class="budget-meter" aria-hidden="true">
+                                <div class="budget-fill" id="budgetFill" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                        <div class="total-amount" id="totalPriceDisplay">50 zł</div>
+                    </div>
+
+                    <button type="submit" class="btn-submit btn-shimmer" id="submitBtn">
+                        <span>Wyślij zamówienie i odbierz link testowy 🚀</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stopka -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <img src="logo.png" alt="WebKit Studio" class="footer-logo">
+            <p>© 2026 WebKit Studio. Kodujemy nowoczesne strony HTML, CSS i JS.</p>
+            <p class="footer-mail">
+                Kontakt: <a href="mailto:webkitstudio.pl@gmail.com">webkitstudio.pl@gmail.com</a>
+                <button type="button" class="copy-mail-btn" id="copyMailBtn" title="Skopiuj adres e-mail">Kopiuj e-mail</button>
+                • Płatność: <strong>BLIK po podglądzie projektu</strong>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Powiadomienie Toast -->
+    <div class="toast-notification" id="toastNotification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
